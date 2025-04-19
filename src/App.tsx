@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,8 +23,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <AuthProvider>
-        <MobileApp />
         <BrowserRouter>
+          <MobileApp />
           <Routes>
             {/* Auth Routes */}
             <Route path="/login" element={<LoginPage />} />
