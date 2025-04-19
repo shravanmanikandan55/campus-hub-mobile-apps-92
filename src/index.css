@@ -13,11 +13,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 260 60% 75%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 260 30% 54%;
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -97,5 +97,26 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Mobile app specific styles */
+  .mobile-container {
+    @apply max-w-md mx-auto min-h-screen overflow-hidden;
+  }
+
+  .app-header {
+    @apply sticky top-0 z-10 backdrop-blur-sm;
+  }
+
+  .app-input {
+    @apply rounded-lg h-12;
+  }
+
+  .card-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4;
   }
 }
